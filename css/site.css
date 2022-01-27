@@ -1,57 +1,61 @@
-:root {
+:root{
     --primary-color: #1d5888;
     --secondary-color: #32c3af;
     --dark-color: #292929;
     --light-color: #e7e7e7;
 }
 
-body {
+.logoFont{
+    font-family: 'Bungee', cursive;
+}
+
+body{
     color: var(--dark-color);
 }
 
-nav {
+nav{
     background-color: var(--dark-color);
 }
 
-footer {
+footer{
     background-color: var(--dark-color);
 }
 
-h1,h2,h3,h4,h5,h6 {
+h1,h2,h3,h4,h5,h6{
     color: var(--primary-color);
 }
 
-footer {
+footer{
     padding-right: 1rem;
 }
 
-footer .social>a {
+footer .social>a{
     color: var(--light-color);
     opacity: 0.75;
 }
 
-footer .social>a:hover {
+footer .social>a:hover{
     opacity: 0.9;
     color: var(--secondary-color);
 }
 
-.bsicon {
+.bsicon{
     color: purple;
 }
 
-.jsicon {
+.jsicon{
     color: rgb(197, 197, 3);
 }
 
-.html5icon {
+.html5icon{
     color:orangered;
 }
 
-.css3icon {
+.css3icon{
     color: rgb(11,82,214);
 }
 
-.checklist>li i {
+.checklist>li i{
     color: var(--secondary-color);
 }
 
@@ -62,11 +66,11 @@ word-break: break-all;
 word-wrap: break-word;
 }
 
-main>.container {
+main>.container{
     padding: 60px 15px 0;
     margin-bottom: 5rem;
 }
-.sticky-footer {
+.sticky-footer{
     position: sticky;
     left: 0;
     bottom: 0;
