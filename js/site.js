@@ -6,6 +6,10 @@ function getValues() {
     let startValue = document.getElementById("startValue").value;
     let endValue = document.getElementById("endValue").value;
 
+    // convert to Numbers
+    startValue = Number(startValue);
+    endValue = Number(endValue);
+
     // if valid input, generate and display numbers
     if (validateInput(startValue,endValue)) {
         // call generateNumbers
@@ -33,7 +37,7 @@ function validateInput(sValue, eValue) {
     let output = true;
 
     // check numbers are integer
-    if (!Number.isInteger(Number(sValue)) || !Number.isInteger(Number(eValue))) {
+    if (!Number.isInteger(sValue) || !Number.isInteger(eValue)) {
         alert("You must enter integers!")
         output = false;
     }

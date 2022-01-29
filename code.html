@@ -67,6 +67,10 @@
                                 let startValue = document.getElementById("startValue").value;
                                 let endValue = document.getElementById("endValue").value;
                             
+                                // convert to Numbers
+                                startValue = Number(startValue);
+                                endValue = Number(endValue);
+                            
                                 // if valid input, generate and display numbers
                                 if (validateInput(startValue,endValue)) {
                                     // call generateNumbers
@@ -94,7 +98,7 @@
                                 let output = true;
                             
                                 // check numbers are integer
-                                if (!Number.isInteger(Number(sValue)) || !Number.isInteger(Number(eValue))) {
+                                if (!Number.isInteger(sValue) || !Number.isInteger(eValue)) {
                                     alert("You must enter integers!")
                                     output = false;
                                 }
@@ -130,7 +134,7 @@
                                     else {
                                         className = "odd";
                                     }
-                                    // this does not render correctly with Prism, see the source
+                            
                                     templateRows += `<tr><td class="${className} text-center">${num}</td></tr>`;
                                 }
                             
@@ -143,7 +147,8 @@
                 <div class="col-lg-4">
                     <p>The Code is structured in four functions.</p>
                     <h5>getValues</h5>
-                    <p>getValues accepts(gets) the user input from the page. It utilises <strong>getElementById</strong> to pull values from the page. 
+                    <p>getValues accepts(gets) the user input from the page. It utilises <strong>getElementById</strong> to pull values from the page,
+                        and then converts them to a 'Number' value. 
                         The input values are validated with the <strong>validateInput</strong> function. If valid, the values are passed to the 
                         <strong>generateNumbers</strong> function. The function <strong>generateNumbers</strong> returns an array
                         of values and passes that array to the <strong>displayNumbers function.</strong></p>
